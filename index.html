@@ -1,0 +1,63 @@
+<!--
+  Tic Tac Toe game
+  Author: María Quintero (marquipor)
+  Date: 2025-09-30
+  Simple two-player Tic Tac Toe game with scoreboard and reset functionality.
+-->
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Tic tac toe</title>
+        <link rel="stylesheet" href="css/style_tictactoe.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <nav>
+                <input type="button" value="Siguiente turno" id="reset" onClick="nextTurn()">
+                <input type="button" value="Reiniciar partida" id="restart" onClick="resetGameAndScoreboard()">
+            </nav>
+        </header>
+        <main>
+            <p id="activePlayerMessage"></p>
+            <table id="board">
+               
+                <tr>
+                    <td onclick="markCell(this)" id="cell0"></td>
+                    <td onclick="markCell(this)" id="cell1"></td>
+                    <td onclick="markCell(this)" id="cell2"></td>
+
+                </tr>
+                <tr>
+                    <td onclick="markCell(this)" id="cell3"></td>
+                    <td onclick="markCell(this)" id="cell4"></td>
+                    <td onclick="markCell(this)" id="cell5"></td>
+                </tr>
+                <tr>
+                    <td onclick="markCell(this)" id="cell6"></td>
+                    <td onclick="markCell(this)" id="cell7"></td>
+                    <td onclick="markCell(this)" id="cell8"></td>
+                </tr>
+            </table>
+                <table id="scoreboard">
+                    <tr>
+                        <th>X</th>
+                        <th>Empate</th>
+                        <th>O</th>
+                    </tr>
+                    <tr>
+                        <td id="scoreX">0</td>
+                        <td id="scoreDraws">0</td>
+                        <td id="scoreO">0</td>
+
+                    </tr>
+                </table>
+        </main>
+
+        <footer>
+            <p>29/09/2025 - marquipor</p>
+        </footer>
+        <script src="js/tictactoe.js"></script>
+    </body>
+</html>

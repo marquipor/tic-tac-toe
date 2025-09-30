@@ -1,0 +1,115 @@
+/* -------------------------
+   Global Styles
+-------------------------- */
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column; /* Header, main y footer en columa */
+    min-height: 100vh; /*Body ocupa toda la altura*/
+    background-color: darkcyan;
+    color: white;
+    font-family: 'Courier New', monospace;
+}
+
+/* -------------------------
+   Layout
+-------------------------- */
+
+main{
+    flex: 1; /* Main ocupa todo el espacio disponible */
+}
+
+header, footer{
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
+}
+
+/* Header como flex container */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre h1 y nav */
+    align-items: center;
+}
+
+/* -------------------------
+   Typography
+-------------------------- */
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#activePlayerMessage {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* -------------------------
+   Buttons in nav
+-------------------------- */
+
+nav input {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav input:hover {
+    transform: scale(1.05);  
+    opacity: 0.9;
+}
+
+/* -------------------------
+   Board
+-------------------------- */
+
+#board {
+    border-spacing: 10px;
+    margin: 50px auto 0 auto;
+}
+#board td{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    background-color: antiquewhite;
+    font-size: 100px;
+    font-family: fantasy;
+    cursor: pointer;
+}
+
+#board td:hover {
+    background-color: #f0e68c; 
+}
+
+#scoreboard{
+    border-spacing: 10px;
+    margin: 40px auto 0 auto;;
+}
+
+#scoreboard td{
+    border-radius: 25px;
+    padding: 35px;
+    border: 1px solid aliceblue;
+}
+
+#scoreX { background-color: lightblue;}
+
+#scoreO { background-color: lightgreen; }
+
+#scoreDraws{ background-color: grey; }
